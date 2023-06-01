@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Image, Text } from "@chakra-ui/react";
+import { Button, Card, CardBody, Heading, Image, Text } from "@chakra-ui/react";
 import { FetchMovie } from "../hooks/useMovie";
 
 interface Props {
@@ -18,6 +18,9 @@ const MovieCard = ({ movie }: Props) => {
         <Text>{movie.language}</Text>
         <Text>{movie.rating.average}</Text>
       </CardBody>
+      <Button bgColor="blue" marginTop="8px">
+        Book Now
+      </Button>
     </Card>
   );
 };
