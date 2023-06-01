@@ -1,21 +1,8 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import apiClient from "../services/api-client";
-
-interface FetchMovie {
-  id: number;
-  name: string;
-  language: string;
-}
+import useMovie from "../hooks/useMovie";
 
 const Movis = () => {
-  const [movie, setMovie] = useState<FetchMovie[]>([]);
-
-  useEffect(() => {
-    apiClient
-      .get<FetchMovie[]>("https://api.tvmaze.com/shows")
-      .then((res) => setMovie(res.data));
-  });
+  const { movie } = useMovie();
   return (
     <ul>
       {movie.map((movie) => (
