@@ -1,6 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
-
+import Movis from "./components/Movis";
 function App() {
   return (
     <Grid
@@ -12,7 +12,9 @@ function App() {
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-      <GridItem area="main">Main</GridItem>
+      <GridItem area="main">
+        <Movis />
+      </GridItem>
     </Grid>
   );
 }
