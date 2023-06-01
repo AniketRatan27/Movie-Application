@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
 import useMovie from "../hooks/useMovie";
+import { SimpleGrid, HStack, flexbox, Button } from "@chakra-ui/react";
+import MovieCard from "./MovieCard";
 
 const Movis = () => {
   const { movie } = useMovie();
   return (
-    <ul>
+    <SimpleGrid columns={4} spacing={10}>
       {movie.map((movie) => (
-        <li key={movie.id}>{movie.name}</li>
+        <MovieCard key={movie.id} movie={movie} />
       ))}
-    </ul>
+      <Button bgColor="blue" marginTop="8px">
+        Book Now
+      </Button>
+    </SimpleGrid>
   );
 };
 

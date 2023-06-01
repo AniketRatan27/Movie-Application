@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 
-interface FetchMovie {
+
+export interface FetchMovie {
     id: number;
     name: string;
     language: string;
+    image:{
+      original:string
+    };
+    rating:{
+        average:number;
+    }
   }
 const useMovies=()=>{
     const [movie, setMovie] = useState<FetchMovie[]>([]);
