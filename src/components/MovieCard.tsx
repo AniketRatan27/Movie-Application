@@ -6,10 +6,10 @@ interface Props {
 }
 const MovieCard = ({ movie }: Props) => {
   return (
-    <Card margin="20px">
+    <Card margin="20px" height="500px">
       <Image
         src={movie.image.original}
-        height="300px"
+        height="290px"
         width="350px"
         borderRadius="10px"
       />
@@ -17,10 +17,10 @@ const MovieCard = ({ movie }: Props) => {
         <Heading>{movie.name}</Heading>
         <Text>{movie.language}</Text>
         <Text>{movie.rating.average}</Text>
+        <Button bgColor="blue" marginTop="8px">
+          Know More
+        </Button>
       </CardBody>
-      <Button bgColor="blue" marginTop="8px">
-        Know More
-      </Button>
     </Card>
   );
 };
