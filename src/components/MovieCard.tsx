@@ -19,7 +19,7 @@ const MovieCard = ({ movie }: Props) => {
         <Text>{movie.rating.average}</Text>
       </CardBody>
       <Button bgColor="blue" marginTop="8px">
-        Book Now
+        Know More
       </Button>
     </Card>
   );
