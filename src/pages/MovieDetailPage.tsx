@@ -6,7 +6,7 @@ const MovieDetailPage = () => {
   const { data: shows } = useMovi(name!);
   return (
     <>
-      <Heading>{shows?.data}</Heading>
+      <Heading>Movies</Heading>
     </>
   );
 };
